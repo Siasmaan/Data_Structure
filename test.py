@@ -21,6 +21,19 @@ while True:
     c.add(n)
 
 #your code goes here
-while not c.is_empty():
-  c.next()
-  print(c.customers)
+
+#variable 
+times_general = 0
+times_technical = 0
+for i in c.customers:
+   if i == "general":
+      times_general+=1
+   elif i == "technical": 
+      times_technical+=1
+
+total = (times_general*5) + (times_technical*10)
+
+#check
+print(times_general)
+print(times_technical)
+print(total)
