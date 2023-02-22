@@ -1,4 +1,4 @@
 well i gonna tell something about list data structer are different 
-they have 1. stack they are like LIFO (Last In First Out)
-          2. queue this are different FIFO (First In First Out)
+they have 1. Stack they are like LIFO (Last In First Out)
+          2. Queue this are different FIFO (First In First Out)
           
