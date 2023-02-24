@@ -1,39 +1,36 @@
-class CallCenter:
+class Track:
+    def __init__(self, title, next):
+        self.title = title
+        self.next = next
+
+class Player:
     def __init__(self):
-      self.customers = []
+        self.head = None
 
-    def is_empty(self):
-      return self.customers == []
+    def add(self, title):
+        if not self.head:
+            self.head = Track(title, None)
+            return
+        curr = self.head
+        while curr.next:
+            curr = curr.next
+        curr.next = Track(title, None)
 
-    def add(self, x):
-      self.customers.insert(0, x)
+    def show(self):
+        n = self.head
+        while(n != None):
+            print(n.title)
+            n = n.next
+            if n == None:
+                break
 
-    def next(self):
-      return self.customers.pop()
-
-
-c = CallCenter()
-
+p = Player()
 while True:
-    n = input()
-    if n == 'end':
+    x = input()
+    if x == 'end':
         break
-    c.add(n)
+    p.add(x)
 
 #your code goes here
 
-#variable 
-times_general = 0
-times_technical = 0
-for i in c.customers:
-   if i == "general":
-      times_general+=1
-   elif i == "technical": 
-      times_technical+=1
-
-total = (times_general*5) + (times_technical*10)
-
-#check
-print(times_general)
-print(times_technical)
-print(total)
+p.show()
