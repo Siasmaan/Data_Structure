@@ -1,4 +1,4 @@
-class Stack:
+class Stack: #stack is LIFO (Last in First out)
     def __init__(self):
         self.items = []  
   
